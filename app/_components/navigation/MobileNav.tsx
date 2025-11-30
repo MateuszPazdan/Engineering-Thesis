@@ -46,7 +46,7 @@ export default function MobileNav({
 			}`}
 		>
 			<Link
-				href={'/settings'}
+				href={'/app/settings'}
 				onClick={handleCloseNav}
 				className='flex flex-row justify-between items-center hover:bg-grayOne rounded-lg duration-300 transition-colors group'
 			>

@@ -61,7 +61,7 @@ export default function LoggedIn() {
 							/>
 
 							<UserNavElement
-								href='/settings'
+								href='/app/settings'
 								title='Ustawienia konta'
 								icon={<CiSettings />}
 							/>

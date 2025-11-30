@@ -1,7 +1,7 @@
-import { Metadata } from 'next';
-import ChangePassword from '../_components/settings/ChangePassword';
-import DeleteAccount from '../_components/settings/DeleteAccount';
-import UserSettings from '../_components/settings/UserSettings';
+import ChangePassword from "@/app/_components/settings/ChangePassword";
+import DeleteAccount from "@/app/_components/settings/DeleteAccount";
+import UserSettings from "@/app/_components/settings/UserSettings";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: 'Konto',
