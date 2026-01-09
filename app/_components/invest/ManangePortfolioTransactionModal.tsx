@@ -237,7 +237,7 @@ export default function ManagePortfolioTransactionModal({
 					error={errors?.amount?.message as string}
 					type='number'
 					required
-					step={0.000001}
+					step={0.00000001}
 				/>
 				<FormInput
 					label='Cena za aktywo'

@@ -3,14 +3,18 @@
 import {
 	ConverterAssetDetails,
 	useConvertAssetsQuery,
+	useRetrieveAssetsInConverterQuery,
 } from '@/app/_redux/features/globalApiSlice';
-import { formatFullPrice } from '@/app/_utils/formatAmountOfMoney';
+import { formatConverterValue } from '@/app/_utils/formatAmountOfMoney';
 import { useState } from 'react';
 import { BsArrowDownUp } from 'react-icons/bs';
 import CoinAndValueInput from './CoinAndValueInput';
 import { useDebounce } from '@/app/_hook/useDebounce';
 
 export default function Converter() {
+	const { data: assetList, isLoading: isAssetListLoading } =
+		useRetrieveAssetsInConverterQuery();
+	const currencies = assetList?.currencies || [];
 	const [selectedAsset, setSelectedAsset] = useState<ConverterAssetDetails>();
 	const [secondSelectedAsset, setSeconSelectedAsset] =
 		useState<ConverterAssetDetails>();
@@ -25,6 +29,9 @@ export default function Converter() {
 		{
 			skip: !selectedAsset || !secondSelectedAsset,
 		}
+	);
+	const isSecondAssetInList = currencies.some(
+		(currency) => currency.symbol === secondSelectedAsset?.symbol
 	);
 
 	return (
@@ -55,12 +62,12 @@ export default function Converter() {
 					disabled
 				/>
 			</div>
-			{isLoading || !data ? (
+			{isLoading || isAssetListLoading || !data ? (
 				<div className='h-[28px] w-40 shimmer rounded-md' />
 			) : (
 				<p className='font-medium text-xl sm:text-xl flex flex-col gap-1 '>
 					{deboundedAmount || 1} {selectedAsset?.symbol.toUpperCase()} ≈{' '}
-					{formatFullPrice(data?.converted_amount, false)}{' '}
+					{formatConverterValue(data?.converted_amount, isSecondAssetInList)}{' '}
 					{secondSelectedAsset?.symbol.toUpperCase()}{' '}
 				</p>
 			)}

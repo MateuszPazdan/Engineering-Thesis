@@ -56,7 +56,6 @@ const globalApiSlice = apiSlice.injectEndpoints({
 
 export const {
 	useRetrieveGlobalSearchQuery,
-	useLazyRetrieveGlobalSearchQuery,
 	useRetrieveAssetsInConverterQuery,
 	useConvertAssetsQuery,
 } = globalApiSlice;

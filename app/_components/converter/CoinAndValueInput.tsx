@@ -7,6 +7,7 @@ import {
 	useRetrieveAssetsInConverterQuery,
 } from '@/app/_redux/features/globalApiSlice';
 import NoData from '../NoData';
+import { formatConverterValue } from '@/app/_utils/formatAmountOfMoney';
 
 interface CoinAndValueInputProps {
 	selectedAsset: ConverterAssetDetails | undefined;
@@ -31,6 +32,9 @@ export default function CoinAndValueInput({
 	const [cryptoListLength, setCryptoListLength] = useState(5);
 	const [stockListLength, setStockListLength] = useState(5);
 	const [currenciesListLength, setCurrenciesListLength] = useState(5);
+	const isAssetInList = assetList?.currencies.some(
+		(currency) => currency.symbol === selectedAsset?.symbol
+	);
 
 	const closeModal = () => {
 		setIsOpen(false);
@@ -94,14 +98,23 @@ export default function CoinAndValueInput({
 						<FaAngleDown />
 					</span>
 				</button>
-				<input
-					min={0}
-					type='number'
-					className='p-2 text-right bg-transparent outline-none appearance-none m-0 w-full'
-					disabled={disabled}
-					value={isNaN(Number(amount)) ? 0 : Number(amount)}
-					onChange={(e) => !disabled && setAmount?.(parseFloat(e.target.value))}
-				/>
+
+				{disabled ? (
+					<p className='w-full text-right'>
+						{formatConverterValue(Number(amount), isAssetInList)}
+					</p>
+				) : (
+					<input
+						min={0}
+						type='number'
+						className='p-2 text-right bg-transparent outline-none appearance-none m-0 w-full'
+						disabled={disabled}
+						value={isNaN(Number(amount)) ? 0 : Number(amount)}
+						onChange={(e) =>
+							!disabled && setAmount?.(parseFloat(e.target.value))
+						}
+					/>
+				)}
 			</div>
 			<div
 				ref={listRef}

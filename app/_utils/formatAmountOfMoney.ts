@@ -26,3 +26,24 @@ export function formatFullPrice(
 
 	return formatter.format(amount);
 }
+
+export function formatConverterValue(
+	amount: number | undefined,
+	isCurrency?: boolean
+): string {
+	if (!amount) return '0';
+	if (isCurrency)
+		return new Intl.NumberFormat('pl-PL', {
+			minimumFractionDigits: 2,
+			maximumFractionDigits: 2,
+		}).format(amount);
+
+	const formatter = new Intl.NumberFormat('pl-PL', {
+		minimumSignificantDigits: amount < 1 ? 8 : undefined,
+		maximumSignificantDigits: amount < 1 ? 8 : undefined,
+		minimumFractionDigits: amount >= 1 ? 8 : undefined,
+		trailingZeroDisplay: 'stripIfInteger',
+	});
+
+	return formatter.format(amount);
+}

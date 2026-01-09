@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { useClickOutside } from '@/app/_hook/useClickOutside';
+// import { useClickOutside } from '@/app/_hook/useClickOutside';
 import Button from './Button';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -37,11 +37,11 @@ export default function DropdownMenu({
 	const buttonRef = useRef<HTMLDivElement>(null);
 	const dropdownRef = useRef<HTMLDivElement>(null);
 
-	const closeModal = () => {
-		setIsExtended(false);
-	};
+	// const closeModal = () => {
+	// 	setIsExtended(false);
+	// };
 
-	useClickOutside(dropdownRef, closeModal, buttonRef);
+	// useClickOutside(dropdownRef, closeModal, buttonRef);
 
 	return (
 		<div className='relative flex w-fit' ref={buttonRef}>
