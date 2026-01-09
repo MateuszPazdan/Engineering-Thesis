@@ -32,11 +32,17 @@ export function formatConverterValue(
 	isCurrency?: boolean
 ): string {
 	if (!amount) return '0';
-	if (isCurrency)
-		return new Intl.NumberFormat('pl-PL', {
-			minimumFractionDigits: 2,
-			maximumFractionDigits: 2,
-		}).format(amount);
+	if (isCurrency) {
+		return amount < 1
+			? new Intl.NumberFormat('pl-PL', {
+					minimumSignificantDigits: 4,
+					maximumSignificantDigits: 4,
+			  }).format(amount)
+			: new Intl.NumberFormat('pl-PL', {
+					minimumFractionDigits: 2,
+					maximumFractionDigits: 2,
+			  }).format(amount);
+	}
 
 	const formatter = new Intl.NumberFormat('pl-PL', {
 		minimumSignificantDigits: amount < 1 ? 8 : undefined,
