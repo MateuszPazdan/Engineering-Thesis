@@ -65,11 +65,11 @@ The system integrates financial data, investment tracking, and analytics into a 
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/MateuszPazdan/Engineering-thesis.git
+   git clone https://github.com/MateuszPazdan/Engineering-Thesis.git
 
 2. Go to folder
    ```bash
-   cd Engineering-thesis
+   cd Engineering-Thesis
 
 3. Install dependencies
    ```bash
