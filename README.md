@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+![Logo Asset Flow](images/logo.png)
 
-First, run the development server:
+# Engineering Thesis
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Asset Flow - a responsive web application designed for comprehensive personal finance management. The system enables users to control their budgets, monitor investments in cryptocurrencies and stocks, analyze financial data, and make informed decisions based on real-time market information.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Table of contents
 
-## Learn More
+- Description
+- Features
+- Tech Stack
+- Requirements
+- Installation
+- Launching
+- Application Modules
+- Screenshots of the App
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Description
 
-## Deploy on Vercel
+Asset Flow is a modern, responsive web application created to support users in managing their personal finances in a clear and intuitive way. The application combines budget management with investment tracking, allowing users to monitor both everyday expenses and long-term financial assets in one place.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project was developed as part of an engineering thesis and focuses on usability, scalability, and performance. It enables users to manage budgets, track cryptocurrency and stock investments, analyze financial indicators, and generate summaries that help evaluate their financial situation.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The system integrates financial data, investment tracking, and analytics into a single environment, eliminating the need for multiple separate tools. Thanks to an intuitive interface and real-time data presentation, the application supports both beginner and advanced users.
+
+
+
+## 🚀 Features
+
+- ✅ User registration and login
+- ✅ Budget management
+- ✅ Investment tracking
+- ✅ Market data
+- ✅ Analytics & reports
+- ✅ Asset converter
+
+
+
+## 🧱 Tech Stack
+
+- Next.js
+- TypeScript
+- Redux Toolkit
+- Tailwind CSS
+- Recharts
+- React Hook Form
+ 
+
+
+## 📦 Requirements
+
+- Node.js >= 18
+- npm
+- Backend API (running separately)
+
+
+
+## 🛠 Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/MateuszPazdan/Engineering-thesis.git
+
+2. Go to folder
+   ```bash
+   cd Engineering-thesis
+
+3. Install dependencies
+   ```bash
+   npm install
+
+## 🏃‍♂️ Launching
+
+  ```bash
+    npm run dev
+  ```
+
+
+## 🧩 Application Modules
+
+- Authentication
+- Budget module
+- Investment module
+- Market module
+- Reports module
+- Converter module
+
+
+## 📸 Screenshots of the App
+
+### 📊 Market Overview
+General market statistics for cryptocurrencies and stocks.  
+![Market Overview Screenshot](images/market.png)
+
+### 💰 Budget Management
+Create and manage personal budgets and transactions. 
+![Budget Management Screenshot](images/budget.png)
+
+### 📈 Investments
+Track cryptocurrency and stock portfolios.
+![Investments Screenshot](images/investments.png)
+
+### 📉 Analytics 
+Visual summaries and performance charts.
+![Reports & Analytics  Screenshot](images/analytics.png)
+
+### 🔄 Asset Converter
+Compare and convert values between different financial instruments.
+![Asset Converter Screenshot](images/converter.png)
+
+
+
+
+ 
+
+
+
+
