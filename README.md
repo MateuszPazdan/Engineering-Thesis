@@ -1,5 +1,6 @@
 
-![Logo Asset Flow](images/logo.png)
+<img src="public/logo.png" alt="Asset Flow Logo" width="120"/>
+
 
 # Engineering Thesis
 
@@ -96,18 +97,21 @@ The system integrates financial data, investment tracking, and analytics into a 
 ### 📊 Market Overview
 General market statistics for cryptocurrencies and stocks.  
 ![Market Overview Screenshot](images/market.png)
+![Market 2 Overview Screenshot](images/market2.png)
 
 ### 💰 Budget Management
 Create and manage personal budgets and transactions. 
 ![Budget Management Screenshot](images/budget.png)
+![Budget 2 Management Screenshot](images/budget2.png)
 
 ### 📈 Investments
 Track cryptocurrency and stock portfolios.
 ![Investments Screenshot](images/investments.png)
+![Investments 2 Screenshot](images/investments2.png)
 
 ### 📉 Analytics 
 Visual summaries and performance charts.
-![Reports & Analytics  Screenshot](images/analytics.png)
+![Analytics  Screenshot](images/analytics.png)
 
 ### 🔄 Asset Converter
 Compare and convert values between different financial instruments.
